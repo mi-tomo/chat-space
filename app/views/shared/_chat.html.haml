@@ -6,18 +6,15 @@
       .left-header__members
         -@user.each do |user|
           =user.name
-        
-        
+
 
     .right-header
       .right-header__button
-        edit
+        = link_to "/groups/#{@group.id}/edit" do
+          edit
   .messages
     = render @messages
   
-
-
-
     
   .form
     = form_for [@group, @message] do |f|
