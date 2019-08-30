@@ -1,5 +1,11 @@
+.wrapper{
+
+}
+
 .chat {
-  width: calc(100% - 300px);
+  width: calc( 100vw - 300px );
+  height: 100vh;
+  float:right;
   .header {
     box-sizing: border-box;
     height: 100px;
@@ -12,7 +18,7 @@
         margin-top: 35px;
       }
       &__members {
-        @include flexbox;
+        // @include flexbox;
         color: $light_gray;
         font-size: 12px;
         margin-top: 15px;
@@ -75,14 +81,20 @@
     &__message {
       border: none;
       float: left;
+      background-color: #fafafa;
       height: 50px;
       width: calc(100% - 150px);
     }
     &__mask {
-      background-color: $white;
+      
       float: left;
       height: 50px;
+      line-height:50px;
       padding-right: 10px;
+      text-align:center;
+      vertical-align: middle;
+      background-color: $white;
+      
       &__image {
         font-size: 20px;
         line-height: 50px;
@@ -96,8 +108,11 @@
       border: none;
       color: $white;
       float: right;
+      text-align:center;
+      vertical-align: middle;
       font-size: 16px;
       height: 50px;
+      line-height:50px;
       margin-left: 15px;
       padding: 0 30px;
     }
