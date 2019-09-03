@@ -7,6 +7,10 @@ $(function(){
           today = today.slice(0, 16);
           today = today.replace( /-/g, '/' ); 
           today = today.replace( 'T', '' ); 
+      var img = ""
+          if (post.image['url'] !== null) {
+              img = `<img class="lower-message__image" src="${ post.image['url'] }" >`
+          }
 
   var html =`<div class="message">
           <div class="upper-message">
@@ -21,7 +25,7 @@ $(function(){
           <p class="lower-message__content">
           ${post.content}
           </p>
-          <img class="lower-message__image" src="${ post.image['url'] }" >
+          ${ img }
           </div>
           </div>`
 
@@ -41,6 +45,7 @@ $(function(){
     contentType: false
  })
  .done(function(post){
+  console.log(post)
   var html = buildPost(post);
   $('.messages').append(html)
   $('#message_content').val('')
