@@ -48,18 +48,14 @@ $(function(){
   console.log(post)
   var html = buildPost(post);
   $('.messages').append(html)
-  $('#message_content').val('')
-  $('#message_image').val('')
-  $('.upper-message__date').val('')
+  $("#new_message")[0].reset();
   $('input[name="commit"]').removeAttr("disabled");
   $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
 
  })
  .fail(function(){
       alert('エラ〜');
-      $('#message_content').val('')
-      $('#message_image').val('')
-      $('.upper-message__date').val('')
+      $("#new_message")[0].reset();
       $('input[name="commit"]').removeAttr("disabled");
  })
 })
