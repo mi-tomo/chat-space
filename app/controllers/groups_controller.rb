@@ -18,6 +18,12 @@ class GroupsController < ApplicationController
   end
 
   def edit
+      @users = @group.users.where.not(id: current_user.id)
+    
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def update
