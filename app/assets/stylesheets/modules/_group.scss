@@ -26,6 +26,7 @@ li {
 
 .chat-group-form {
   width: 980px;
+  height: auto;
   margin: 60px auto;
   padding: 40px;
   background-color: #fff;
@@ -103,5 +104,7 @@ li {
     &--remove {
       color: #f05050;
     }
+  
+
   }
 }
