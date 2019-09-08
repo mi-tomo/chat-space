@@ -67,3 +67,6 @@ gem "font-awesome-rails"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'pry-rails'
+group :production do
+  gem 'unicorn', '5.4.1'
+end
