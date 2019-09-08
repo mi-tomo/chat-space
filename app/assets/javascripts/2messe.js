@@ -11,7 +11,6 @@ $(function(){
       var img = ""
           if (post.image['url'] !== null) {
               img = `<img class="lower-message__image" src="${ post.image['url'] }">`
-//               img = `<img class="lower-message__image" src="${ post.image['url'] }" >`
           }
           var html =`<div class="message">
           <div class="upper-message">
@@ -45,7 +44,6 @@ $(function(){
  })
  .done(function(post){
   var html = buildPost(post);
-console.log(post.image['url'])
   $('.messages').append(html)
   $("#new_message")[0].reset();
   $('input[name="commit"]').removeAttr("disabled");
