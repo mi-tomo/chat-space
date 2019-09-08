@@ -35,7 +35,9 @@ $(window).on('load',function(){
 
           
           var reloadMessages = function() {
-            document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
+            if(document.URL.match(/(messages)/)) {
+            
+        
             
             var list = [0];
           $(".lower-message").each(function() {
@@ -75,7 +77,7 @@ $(window).on('load',function(){
           .fail(function() {
             console.log('error');
           })
-      
+        }
       };
       setInterval(reloadMessages, 5000);
       
