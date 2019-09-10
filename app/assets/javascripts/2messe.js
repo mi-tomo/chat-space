@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() { 
 
 $(function(){
   
@@ -57,4 +58,5 @@ $(function(){
       $('input[name="commit"]').removeAttr("disabled");
  })
 })
+});
 });
